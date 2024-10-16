@@ -1,0 +1,15 @@
+Script started on 2024-10-16 12:13:37+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+[?2004h]0;tumffa@DESKTOP-QDP794S: ~/FullStackOpenPart12[01;32mtumffa@DESKTOP-QDP794S[00m:[01;34m~/FullStackOpenPart12[00m$ exercise12_2.txt[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker image[K[K[K[K[Krun _[K-it ubuntu basgh[K[Kh
+[?2004l
+[?2004h]0;root@19361bb0f0fb: /root@19361bb0f0fb:/# mkdir /usr/src/app
+[?2004l
+[?2004h]0;root@19361bb0f0fb: /root@19361bb0f0fb:/# touch /usr/src/app/index.js
+[?2004l
+[?2004h]0;root@19361bb0f0fb: /root@19361bb0f0fb:/# [Kexit
+[?2004l
+exit
+[?2004h]0;tumffa@DESKTOP-QDP794S: ~/FullStackOpenPart12[01;32mtumffa@DESKTOP-QDP794S[00m:[01;34m~/FullStackOpenPart12[00m$ exit
+[?2004l
+exit
+
+Script done on 2024-10-16 12:14:11+03:00 [COMMAND_EXIT_CODE="0"]
