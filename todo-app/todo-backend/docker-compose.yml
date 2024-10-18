@@ -1,6 +1,27 @@
 services:
-  app:                    # The name of the service, can be anything
-    image: todo-backend # Declares which image to use
-    build: .              # Declares where to build if image is not found
-    ports:                # Declares the ports to publish
+  mongo:
+    image: mongo
+    ports:
+      - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes:
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+
+  backend:
+    build: .
+    ports:
       - 3000:3000
+    environment:
+      MONGO_URL: mongodb://root:example@mongo:27017/the_database?authSource=admin
+      REDIS_URL: redis://172.18.0.2:6379
+    depends_on:
+      - mongo
+      - redis
