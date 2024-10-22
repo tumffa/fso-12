@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   mongo:
     image: mongo
@@ -16,12 +18,17 @@ services:
       - 6379:6379
 
   backend:
-    build: .
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     ports:
       - 3000:3000
     environment:
       MONGO_URL: mongodb://root:example@mongo:27017/the_database?authSource=admin
-      REDIS_URL: redis://172.18.0.2:6379
+      REDIS_URL: redis://redis:6379
     depends_on:
       - mongo
       - redis
+    volumes:
+      - ./:/app
+      - /app/node_modules
