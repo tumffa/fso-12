@@ -4,7 +4,7 @@ services:
         context: ./todo-frontend
         dockerfile: dev.Dockerfile
       volumes:
-        - ./todo-frontend:/app
+        - ./todo-frontend:/usr/src/app
       ports:
         - 5173:5173
       container_name: todo-front-dev
